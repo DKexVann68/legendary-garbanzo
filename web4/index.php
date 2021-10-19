@@ -1,5 +1,6 @@
 <?php
 // set cookies
+    setcookie('auth', 'ok', time()+3600);
 
 ?>
 <html lang="en">
@@ -9,7 +10,7 @@
     <title>Set Cookie Data</title>
 </head>
 <body>
-    <form action="<?php //<code>// ?>" method="">
+    <form action="loggedin.php" method="POST">
     Name: <input type="text" name="username">
     Password: <input type="text" name="password"><br/><br/>
     <input type="submit" value="Log Me In">

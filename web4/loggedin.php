@@ -1,5 +1,14 @@
 <?php
    // test cookies if is set, display if set
+    $cookie_name = "auth";
+    $cookie_val = "ok";
+
+    if(isset($_COOKIE[$cookie_name])) {
+        echo "Cookie '" . $cookie_name . "' is set!<br>";
+    } else {
+        echo "Cookie named '" . $cookie_name . "' is not set!";
+    }
+
 ?>
 <html lang="en">
 <head>
