@@ -1,11 +1,18 @@
 <?php
-    class persons {
-        public #;
-        public $First;
-        public $Last;
-        public $Address;
-        public $logdt;
-    }
+    require('config/db.php');
+
+    // create query
+    $query = 'SELECT * FROM person';
+
+    // Get result
+    $result = mysqli_query($conn, $query);
+
+    $persons = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    
+    // Free result
+    mysqli_free_result($result);
+
+    
 ?>
 
 <?php include('inc/header.php'); ?>
@@ -41,4 +48,4 @@
 
             <button type="button" class="btn btn-dark btn-sm" onclick="document.location='guestbook-login.php'">Logout</button>
 </div>
-<?php include('inc/footer.php'); ?>
+<?php //include('inc/footer.php'); ?>

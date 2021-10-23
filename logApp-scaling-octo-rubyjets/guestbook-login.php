@@ -1,5 +1,8 @@
 <?php
-    
+	require('config/config.php');
+	require('config/db.php');
+
+if(isset($_POST['submit'])){    
 include_once('guestbook-list.php');
    
 function mysqli($data) {
@@ -8,6 +11,7 @@ function mysqli($data) {
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
     return $data;
+  }
 }
 
 
