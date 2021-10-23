@@ -4,7 +4,8 @@
 
 if(isset($_POST['submit'])){    
 include_once('guestbook-list.php');
-   
+
+
 function mysqli($data) {
       
     $data = trim($data);
@@ -12,10 +13,15 @@ function mysqli($data) {
     $data = htmlspecialchars($data);
     return $data;
   }
+  
+  if(ENVIRONMENT == 'development'){
+    $_SESSION['msg'] = 'A new log was created ' . $this->log_name;
 }
 
+}
 
 ?>
+
 <?php include('inc/header.php'); ?>
   <br/>
   <div style="width:30%; margin: auto; text-align: center;">
