@@ -1,22 +1,7 @@
-<?php
-	require('config/config.php');
-	require('config/db.php');
-
-if(isset($_POST['submit'])){    
-include_once('guestbook-list.php');
-
-
-function mysqli($data) {
-      
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-  }
+<?php 
   
-  if(ENVIRONMENT == 'development'){
-    $_SESSION['msg'] = 'A new log was created ' . $this->log_name;
-}
+  if(isset($_POST['submit'])){    
+    header('location:guestbook-list.php');
 
 }
 

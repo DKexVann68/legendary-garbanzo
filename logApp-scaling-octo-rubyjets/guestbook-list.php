@@ -1,6 +1,6 @@
 <?php
-    require('config/db.php');
-
+	require('config/config.php');
+	require('config/db.php');
     // create query
     $query = 'SELECT * FROM person';
 
@@ -12,7 +12,13 @@
     // Free result
     mysqli_free_result($result);
 
-    
+    function mysqli($data) {
+      
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+      }
 ?>
 
 <?php include('inc/header.php'); ?>
