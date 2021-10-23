@@ -48,4 +48,4 @@
 
             <button type="button" class="btn btn-dark btn-sm" onclick="document.location='guestbook-login.php'">Logout</button>
 </div>
-<?php //include('inc/footer.php'); ?>
+<?php include('inc/footer.php'); ?>
